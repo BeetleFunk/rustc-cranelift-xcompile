@@ -1,14 +1,15 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+#[repr(C)]
+pub struct TwoU16s {
+    one: u16,
+    two: u16,
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+extern "C" {
+    pub fn rust_dbg_extern_identity_TwoU16s(v: TwoU16s) -> TwoU16s;
+}
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+#[no_mangle]
+pub unsafe fn foo() {
+    let x = TwoU16s { one: 33, two: 77 };
+    rust_dbg_extern_identity_TwoU16s(x);
 }

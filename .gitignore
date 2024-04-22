@@ -1,1 +1,4 @@
 /app/target
+/app/output
+/output
+/previous-output
