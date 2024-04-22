@@ -1,0 +1,29 @@
+root@c1d9162a8050:/app# CARGO_TARGET_AARCH64_UNKNOWN_LINUX_GNU_LINKER=aarch64-linux-gnu-gcc \
+CC_aarch64_unknown_linux_gnu=aarch64-linux-gnu-gcc \
+CXX_aarch64_unknown_linux_gnu=aarch64-linux-gnu-g++ \
+RUSTFLAGS="--emit llvm-ir --emit asm" \
+cargo build -v -v --target aarch64-unknown-linux-gnu
+   Compiling app v0.1.0 (/app)
+     Running `
+     
+     CARGO=/usr/local/rustup/toolchains/1.77.2-x86_64-unknown-linux-gnu/bin/cargo
+     CARGO_BIN_NAME=app
+     CARGO_CRATE_NAME=app
+     CARGO_MANIFEST_DIR=/app
+     CARGO_PKG_AUTHORS=''
+     CARGO_PKG_DESCRIPTION=''
+     CARGO_PKG_HOMEPAGE=''
+     CARGO_PKG_LICENSE=''
+     CARGO_PKG_LICENSE_FILE=''
+     CARGO_PKG_NAME=app CARGO_PKG_README=''
+     CARGO_PKG_REPOSITORY=''
+     CARGO_PKG_RUST_VERSION=''
+     CARGO_PKG_VERSION=0.1.0
+     CARGO_PKG_VERSION_MAJOR=0
+     CARGO_PKG_VERSION_MINOR=1
+     CARGO_PKG_VERSION_PATCH=0
+     CARGO_PKG_VERSION_PRE=''
+     CARGO_PRIMARY_PACKAGE=1
+     LD_LIBRARY_PATH='/app/target/debug/deps:/usr/local/rustup/toolchains/1.77.2-x86_64-unknown-linux-gnu/lib:/usr/local/rustup/toolchains/1.77.2-x86_64-unknown-linux-gnu/lib' /usr/local/rustup/toolchains/1.77.2-x86_64-unknown-linux-gnu/bin/rustc --crate-name app --edition=2021 src/main.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --diagnostic-width=80 --crate-type bin --emit=dep-info,link -C embed-bitcode=no -C debuginfo=2 -C metadata=4f5dfe4361422bc0 -C extra-filename=-4f5dfe4361422bc0 --out-dir /app/target/aarch64-unknown-linux-gnu/debug/deps --target aarch64-unknown-linux-gnu -C linker=aarch64-linux-gnu-gcc -C incremental=/app/target/aarch64-unknown-linux-gnu/debug/incremental -L dependency=/app/target/aarch64-unknown-linux-gnu/debug/deps -L dependency=/app/target/debug/deps --emit llvm-ir --emit asm`
+    
+    Finished dev [unoptimized + debuginfo] target(s) in 0.10s
