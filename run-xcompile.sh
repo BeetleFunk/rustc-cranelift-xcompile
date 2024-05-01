@@ -9,4 +9,4 @@ if [ -d "output" ]; then
 fi
 mkdir -p output
 
-podman run -v ./output:/app/output xcompile
+podman run -v ./output:/app/output rustc-cranelift-xcompile

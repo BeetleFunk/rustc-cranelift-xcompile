@@ -4,4 +4,6 @@ set -e
 cd "$(dirname "$0")"
 
 echo "*** No output volume when running in interactive mode! ***"
-podman run -it xcompile bash
+
+podman run -it rustc-cranelift-xcompile bash
+# podman run -v ./input:/app/input -it rustc-cranelift-xcompile bash

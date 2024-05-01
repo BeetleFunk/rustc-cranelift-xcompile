@@ -1,5 +1,7 @@
+/input
 /output
 /previous-output
+/rustc_codegen_cranelift
 
 /app/target
 /app/output
